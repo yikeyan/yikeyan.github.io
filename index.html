@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>	
+	</head>
+	<body>
+		<script>//三角形		
+			for (let i = 1; i <=5; i++) {//输出空格			        
+			        for (let j = 1; j <=5-i ; j++) {
+			            document.write("&emsp;")
+			        }			        
+			        for (let j = 1; j <=i ; j++) {//输出*
+			            document.write("* &emsp; ")
+			        }
+			        document.write("<br>")
+			    }
+			    document.write("<hr>")//横线
+			//平行四边形
+		        for(var h=1;h<=5;h++){
+		           for(var k=0;k<=5-h;k++){
+		              document.write("&emsp;");
+		           }
+		           for(var s=1;s<=5;s++){
+		              document.write("* &emsp;");
+		           }		 
+					document.write("<br>")
+		        }
+				document.write("<hr>")
+				//菱形				
+				        for(var i = 0; i < 5; i++) {//上半部分				          
+				            if(i <= 2) {
+				                for(var j = 1; j <= 2 - i; j++) {  //前三行，每行递增两个
+				                    document.write('&nbsp;');
+				                }
+				                for(var j = 0; j < i * 2 + 1; j++) {
+				                    document.write('*');
+				                }							
+				            } 				
+							else {//下半部分
+				                for(var j = 1; j <= i - 2; j++) {
+				                    document.write('&nbsp;');
+				                }
+				                //i=3,打印3个;i=4,打印1个
+				                for(var j = (5 - i) * 2 - 1; j > 0; j--) {
+				                    document.write('*');
+				                }
+				            }
+				            document.write("<br>");
+				        }
+		</script>
+	</body>
+</html>
